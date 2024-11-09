@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+
+  samantha-os1:
+    container_name: samantha-os1
+    build: .
+    image: samantha-os1:latest
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+  
